@@ -4,7 +4,7 @@ export default function App() {
   const [answer, setAnswer] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/get-answer')
+    fetch('/api/get-answer')
       .then(res => res.json())
       .then(json => setAnswer(json.data))
       .catch(console.error);
